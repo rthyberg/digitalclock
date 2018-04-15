@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+// draw main function that sets up box sizes and spacing for numbers.
 func draw() {
 	termbox.Clear(termbox.ColorDefault, termbox.ColorDefault)
 	w, h := termbox.Size()
@@ -188,7 +189,7 @@ func midcross(w int, h int, offX int, offY int) {
 func botcross(w int, h int, offX int, offY int) {
 	for x := 0; x <= w*7/8; x++ {
 		for y := 0; y <= h/10; y++ {
-			termbox.SetCell((x + offX), y+(offY+h-h/10), ' ', termbox.ColorDefault,
+			termbox.SetCell((x + offX), y+(offY+h-h/10+1), ' ', termbox.ColorDefault,
 				termbox.ColorWhite)
 		}
 	}
