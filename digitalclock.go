@@ -208,7 +208,7 @@ func leftupperdown(w int, h int, offX int, offY int) {
 func leftlowerdown(w int, h int, offX int, offY int) {
 	for x := 0; x <= w/6; x++ {
 		for y := 0; y <= h/2; y++ {
-			termbox.SetCell(x+offX, y+(offY+(h/2+1)), ' ', termbox.ColorDefault,
+			termbox.SetCell(x+offX, y+(offY+(h/2)), ' ', termbox.ColorDefault,
 				termbox.ColorWhite)
 		}
 	}
@@ -228,7 +228,7 @@ func rightupperdown(w int, h int, offX int, offY int) {
 func rightlowerdown(w int, h int, offX int, offY int) {
 	for x := 0; x <= w/6; x++ {
 		for y := 0; y <= h/2; y++ {
-			termbox.SetCell(x+offX+w*7/8-w/6, y+(offY+h/2+1), ' ', termbox.ColorDefault,
+			termbox.SetCell(x+offX+w*7/8-w/6, y+(offY+h/2), ' ', termbox.ColorDefault,
 				termbox.ColorWhite)
 		}
 	}
